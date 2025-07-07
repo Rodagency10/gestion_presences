@@ -9,8 +9,8 @@ import java.sql.SQLException;
 
 @ApplicationPath("/api")
 public class HelloApplication extends Application {
-    public static void main(String[] args) throws SQLException {
-        Server.createWebServer("-web", "-webAllowOthers", "-webPort", "8082").start();
-        System.out.println("H2 Console started on port 8082");
-    }
+//    public static void main(String[] args) throws SQLException {
+//        Server.createWebServer("-web", "-webAllowOthers", "-webPort", "8082").start();
+//        System.out.println("H2 Console started on port 8082");
+//    }
 }
