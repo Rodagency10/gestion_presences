@@ -3,7 +3,7 @@ package tp.esgis.org.gestionpresence.rest;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
-
+@Path("/")
 public class GeneralResource {
     @GET
     public String hello() {

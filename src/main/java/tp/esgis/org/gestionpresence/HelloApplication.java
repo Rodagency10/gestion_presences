@@ -1,16 +1,23 @@
 package tp.esgis.org.gestionpresence;
 
-
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
-import org.h2.tools.Server;
+import tp.esgis.org.gestionpresence.rest.CoursResource;
+import tp.esgis.org.gestionpresence.rest.EtudiantsResource;
+import tp.esgis.org.gestionpresence.rest.GeneralResource;
 
-import java.sql.SQLException;
+import java.util.HashSet;
+import java.util.Set;
 
 @ApplicationPath("/api")
 public class HelloApplication extends Application {
-//    public static void main(String[] args) throws SQLException {
-//        Server.createWebServer("-web", "-webAllowOthers", "-webPort", "8082").start();
-//        System.out.println("H2 Console started on port 8082");
-//    }
+    
+    @Override
+    public Set<Class<?>> getClasses() {
+        Set<Class<?>> classes = new HashSet<>();
+        classes.add(EtudiantsResource.class);
+        classes.add(GeneralResource.class);
+        classes.add(CoursResource.class);
+        return classes;
+    }
 }

@@ -6,6 +6,5 @@ import jakarta.persistence.PersistenceContext;
 
 @Stateless
 public class CoursService {
-    @PersistenceContext
-    private EntityManager em;
+
 }
