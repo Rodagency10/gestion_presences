@@ -26,7 +26,7 @@ public class PresenceService {
                 presences.setEtudiants(etudiant);
                 presences.setCours(cours);
                 presences.setPresent(present);
-                presences.setDatePresence(LocalDate.now());
+                presences.setDatePresence(LocalDate.now().toString());
                 em.persist(presences);
             }
         } else {

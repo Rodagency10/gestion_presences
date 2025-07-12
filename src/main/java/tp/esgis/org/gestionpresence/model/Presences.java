@@ -18,7 +18,7 @@ public class Presences {
     private Cours cours;
 
     @Column(nullable = false)
-    private LocalDate datePresence;
+    private String datePresence;
 
     private boolean present;
 
@@ -44,12 +44,15 @@ public class Presences {
     public void setCours(Cours cours) {
         this.cours = cours;
     }
-    public LocalDate getDatePresence() {
+
+    public String getDatePresence() {
         return datePresence;
     }
-    public void setDatePresence(LocalDate datePresence) {
+
+    public void setDatePresence(String datePresence) {
         this.datePresence = datePresence;
     }
+
     public boolean isPresent() {
         return present;
     }
